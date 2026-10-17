@@ -1,0 +1,8 @@
+services:
+  web:
+    container_name: servidor-web
+    image: httpd:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/usr/local/apache2/htdocs:ro
